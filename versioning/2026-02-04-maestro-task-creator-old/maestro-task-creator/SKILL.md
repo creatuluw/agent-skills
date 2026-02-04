@@ -158,24 +158,16 @@ Review with user before finalizing:
 ### Step 5: Save to Auto Run Folder
 
 Save the document to the Maestro Auto Run folder:
-- **Location**: Save to `.\.maestro\tasks\` relative to repository root
+- **Location**: Ask user where their Auto Run folder is located
 - **Filename**: Use descriptive name (e.g., `feature-auth.md`, `bugfix-login.md`)
 - **Images**: Create `images/` subfolder if attaching screenshots or diagrams
-- **Notify user**: After saving, explicitly inform the user of the full file path where the task document was saved
-
-**Example notification:**
-```
-Task saved to: ./.maestro/tasks/feature-auth.md
-You can find this task in your Maestro Auto Run folder.
-```
 
 **Example:**
 ```
-.maestro/
-└── tasks/
-    ├── feature-auth.md
-    └── images/
-        └── auth-flow.png
+Auto Run/
+├── feature-auth.md
+├── images/
+│   └── auth-flow.png
 ```
 
 ## Decision Management
