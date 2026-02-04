@@ -39,13 +39,9 @@
     }
   ],
   "metadata": {
-    "generated": "2025-06-18",
+    "generated": "2025-02-04",
     "total_skills": 3,
     "source_directory": ".agents/skills",
-    "categories": [
-      "Skill Discovery",
-      "Task Management",
-      "Skill Creation"
-    ]
+    "categories": ["Skill Discovery", "Task Management", "Skill Creation"]
   }
 }
