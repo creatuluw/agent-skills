@@ -1,0 +1,47 @@
+# Temporary files and folders
+.tmp/
+*.tmp
+temp/
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if applicable)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Test coverage
+coverage/
+.coverage
+*.cover
+.hypothesis/
+
+# Agent-specific
+.agents/
+.opencode/

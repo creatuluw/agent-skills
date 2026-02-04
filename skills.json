@@ -36,12 +36,33 @@
         "Teach core principles: concise is key, set appropriate degrees of freedom, anatomy of a skill, progressive disclosure",
         "Guide users through the 6-step skill creation process"
       ]
+    },
+    {
+      "frontmatter": {
+        "name": "te9-dev",
+        "description": "Spec-driven development workflow for AI agents. Orchestrate requirements gathering, implementation, testing, and deployment in a structured 6-step process. Use this skill when building software, implementing features, or managing development workflows.",
+        "license": "Complete terms in LICENSE.txt"
+      },
+      "goals": [
+        "Enable AI agents to execute a complete spec-driven development workflow",
+        "Gather requirements systematically through targeted questioning",
+        "Store specifications in a structured format for traceability",
+        "Implement features using test-driven development",
+        "Manage version control through branching and pull requests",
+        "Facilitate collaborative review and approval processes",
+        "Provide clear audit trails and execution logging"
+      ]
     }
   ],
   "metadata": {
-    "generated": "2025-02-04",
-    "total_skills": 3,
+    "generated": "2025-02-05",
+    "total_skills": 4,
     "source_directory": ".agents/skills",
-    "categories": ["Skill Discovery", "Task Management", "Skill Creation"]
+    "categories": [
+      "Skill Discovery",
+      "Task Management",
+      "Skill Creation",
+      "Development Workflow"
+    ]
   }
 }

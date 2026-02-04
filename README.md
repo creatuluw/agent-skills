@@ -17,6 +17,7 @@ npx skills add creatuluw/agent-skills
 npx skills add creatuluw/agent-skills --skill find-skills
 npx skills add creatuluw/agent-skills --skill maestro-task-creator
 npx skills add creatuluw/agent-skills --skill skill-creator
+npx skills add creatuluw/agent-skills --skill te9-dev
 ```
 
 #### Skills in this repository:
@@ -24,6 +25,8 @@ npx skills add creatuluw/agent-skills --skill skill-creator
 - **find-skills** - Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities
 
 - **skill-creator** - Guide for creating effective skills. Use this skill when you want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations
+
+- **te9-dev** - Spec-driven development workflow for AI agents. Orchestrate requirements gathering, implementation, testing, and deployment in a structured 6-step process. Use this skill when building software, implementing features, or managing development workflows
 
 - **maestro-task-creator** - Create Auto Run task documents for Maestro with markdown checklists. Use this when you want to create tasks/playbooks for automated execution, need help structuring work into task documents, or want to "create maestro tasks", "make a playbook", "break down into tasks", or "plan auto run workflow"
 
