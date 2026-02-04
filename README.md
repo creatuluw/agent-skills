@@ -3,16 +3,29 @@ A collection of skills for AI agents
 
 ## Operations
 
-### Browse Skills
-Visit https://skills.sh to discover and install skills from the open agent skills ecosystem.
-
 ### Available Skills
 
-- **Find Skills** - Search and install skills via `npx skills find <query>` or `npx skills add <package>`
-- **Create Skills** - Build custom skills to extend AI agent capabilities
-- **Browser Automation** - Navigate, click, fill forms, take screenshots, and extract data from websites
-- **Refactor Instructions** - Split monolithic agent instruction files into organized documentation
-- **Brainstorming** - Explore ideas and designs before implementation
+> **Note:** When creating a new skill, remember to update this list with its installation command (`npx skills add creatuluw/agent-skills --skill <skill-name>`) and description from SKILL.md frontmatter.
+
+Install skills from this repository:
+
+```bash
+# Install all skills from this repository
+npx skills add creatuluw/agent-skills
+
+# Or install specific skills
+npx skills add creatuluw/agent-skills --skill find-skills
+npx skills add creatuluw/agent-skills --skill maestro-task-creator
+npx skills add creatuluw/agent-skills --skill skill-creator
+```
+
+#### Skills in this repository:
+
+- **find-skills** - Helps users discover and install agent skills when they ask questions like "how do I do X", "find a skill for X", "is there a skill that can...", or express interest in extending capabilities
+
+- **skill-creator** - Guide for creating effective skills. Use this skill when you want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations
+
+- **maestro-task-creator** - Create Auto Run task documents for Maestro with markdown checklists. Use this when you want to create tasks/playbooks for automated execution, need help structuring work into task documents, or want to "create maestro tasks", "make a playbook", "break down into tasks", or "plan auto run workflow"
 
 ### Quick Start
 ```bash

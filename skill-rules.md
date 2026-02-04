@@ -458,3 +458,5 @@ Before committing a skill to this repository, verify:
 - Refer to `templates/` for examples of well-structured skills
 - Use `find-skills` before creating new skills to avoid duplication
 - Always version old skill files to `versioning/` before major updates
+- When creating a new skill, update `README.md` with the skill entry and installation command
+- If the skill introduces new patterns or best practices, document them in this file (skill-rules.md)

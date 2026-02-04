@@ -106,6 +106,31 @@ Before finalizing, verify:
 [ ] No duplication with existing skills
 ```
 
+**STEP 4: Update Documentation**
+
+After creating a new skill, you MUST update the following files:
+
+1. **Update `README.md`:**
+   - Add the skill to the "Available Skills" section
+   - Include the installation command: `npx skills add creatuluw/agent-skills --skill <skill-name>`
+   - Add the skill description from the SKILL.md frontmatter
+   - Format to match existing skill entries
+
+2. **Update `skill-rules.md` (if needed):**
+   - Add any new patterns or conventions established by this skill
+   - Update examples if the skill introduces new best practices
+   - Ensure consistency with existing rules
+
+**Example README.md entry:**
+```markdown
+- **skill-name** - Description from SKILL.md frontmatter. Use this when you need to...
+```
+
+**Example installation command:**
+```bash
+npx skills add creatuluw/agent-skills --skill skill-name
+```
+
 ---
 
 ## ✏️ UPDATING EXISTING SKILLS
@@ -304,6 +329,8 @@ You MUST take these actions automatically:
 [ ] User approved changes (if required)
 [ ] Tested against acceptance criteria
 [ ] Versioned properly (if update)
+[ ] Updated README.md with new skill entry (if creating new skill)
+[ ] Updated skill-rules.md if new patterns introduced (if creating new skill)
 ```
 
 **ALL items must be checked before proceeding.**
