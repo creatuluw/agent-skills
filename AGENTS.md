@@ -32,9 +32,9 @@ npx skills find [relevant keywords]
 - Understand the structure and patterns
 - Follow established conventions
 
-### 4. Reference Skill Rules
+4. Reference Skill Rules
 **READ `skill-rules.md` COMPLETELY before any skill work:**
-- All 6 rules (A-F) are MANDATORY
+- All 10 rules (A-J) are MANDATORY
 - No exceptions
 - Compliance checklist must be passed before committing
 
@@ -98,6 +98,10 @@ Before finalizing, verify:
 [ ] Rule D: Triggers clearly specified
 [ ] Rule E: Steps/tasks/checklists included (if applicable)
 [ ] Rule F: Human interaction scenarios defined
+[ ] Rule G: Permissions explicitly specified
+[ ] Rule H: Tool usage and calls documented
+[ ] Rule I: Format follows agent-friendly structure
+[ ] Rule J: README.md included with installation, features, and usage
 [ ] Follows patterns from templates/
 [ ] No duplication with existing skills
 ```
@@ -229,7 +233,7 @@ You MUST take these actions automatically:
 - No exceptions, no excuses
 
 ### RULE 2: Never Violate Skill Rules
-- All 6 rules (A-F) are MANDATORY for every skill
+- All 10 rules (A-J) are MANDATORY for every skill
 - Compliance checklist must pass before committing
 - If rules conflict, clarify with user before proceeding
 
@@ -291,6 +295,10 @@ You MUST take these actions automatically:
 [ ] Rule D: Triggers clearly specified
 [ ] Rule E: Steps/tasks/checklists included (if applicable)
 [ ] Rule F: Human interaction scenarios defined
+[ ] Rule G: Permissions explicitly specified
+[ ] Rule H: Tool usage and calls documented
+[ ] Rule I: Format follows agent-friendly structure
+[ ] Rule J: README.md included with installation, features, and usage
 [ ] Follows patterns from templates/
 [ ] No duplication with existing skills
 [ ] User approved changes (if required)
@@ -319,7 +327,7 @@ Every skill you produce must be:
 
 **NEVER:**
 - Skip versioning when editing skills
-- Violate any of the 6 rules (A-F)
+- Violate any of the 10 rules (A-J)
 - Create duplicate skills without checking
 - Make destructive changes without approval
 - Assume ambiguous requirements
@@ -334,7 +342,7 @@ Every skill you produce must be:
 When in doubt, consult resources in this order:
 
 1. **agents.md** (this file) - Your instructions
-2. **skill-rules.md** - The 6 mandatory rules
+2. **skill-rules.md** - The 10 mandatory rules
 3. **README.md** - Project overview
 4. **templates/.agents/skills/** - Examples and patterns
 5. **.opencode/skills/skill-creator/** - Creation guidance
@@ -346,7 +354,7 @@ When in doubt, consult resources in this order:
 
 **You are working in a highly structured, rule-governed repository.**
 
-- **STRICTLY** apply all rules A-F to every skill
+- **STRICTLY** apply all rules A-J to every skill
 - **ALWAYS** version before updating
 - **NEVER** skip research and templates
 - **ALWAYS** run compliance checklist

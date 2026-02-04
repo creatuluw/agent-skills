@@ -321,6 +321,96 @@ All skills **MUST** follow these agent-friendly formatting standards to minimize
 - Provide example inputs/outputs
 - Define clear error conditions
 - Specify boundaries and anti-use cases
+```
+
+---
+
+## Rule J: README Documentation
+
+Every skill **MUST** include a `README.md` file that provides essential information for users.
+
+- **Installation**: Clear instructions on how to install the skill
+- **Features**: Overview of what the skill does and its capabilities
+- **When to use**: Guidance on appropriate use cases and scenarios
+- **skills.sh CLI**: Installation instructions using the skills.sh CLI with `npx skills add <owner/repo> --skill <skill-name>` format
+- Should answer: "How do I install and use this skill?"
+
+### Required README Sections
+
+```markdown
+# <Skill Name>
+
+## Installation
+Instructions for installing the skill via skills.sh CLI
+
+## Features
+List of key features and capabilities
+
+## When to Use
+Scenarios and use cases where this skill is appropriate
+
+## Usage
+Basic usage examples and commands
+```
+
+### Example
+```markdown
+# Maestro Task Creator
+
+## Installation
+
+Install via skills.sh CLI:
+```bash
+npx skills add creatuluw/agent-skills --skill maestro-task-creator
+```
+
+Or manually:
+1. Copy the skill directory to your skills folder
+2. Ensure SKILL.md is in the root directory
+
+## Features
+
+- Create structured Auto Run task documents
+- Build markdown checklists for AI agent execution
+- Support task breakdown and workflow planning
+- Enable session isolation for clean context
+
+## When to Use
+
+Use this skill when:
+- You need to create tasks/playbooks for automated execution
+- You want to structure work into executable task documents
+- You're planning an auto run workflow for Maestro
+- You need to break down complex work into actionable steps
+
+## Usage
+
+Basic usage:
+1. Invoke the skill when planning work
+2. Discuss requirements with the skill
+3. Review and validate the generated task document
+4. Save to your Maestro Auto Run folder
+```
+
+### Installation Format
+
+**Skills.sh CLI pattern:**
+```bash
+npx skills add <owner/repo> --skill <skill-name>
+```
+
+**Example:**
+```bash
+npx skills add creatuluw/agent-skills --skill maestro-task-creator
+```
+
+**Manual installation:**
+1. Copy skill directory to `.agents/skills/` or configured skills folder
+2. Ensure `SKILL.md` exists in root of skill directory
+3. Include any required `scripts/`, `references/`, or `assets/` directories
+
+```
+
 
 ---
 
@@ -352,6 +442,7 @@ Before committing a skill to this repository, verify:
 [ ] Rule G: Permissions explicitly specified
 [ ] Rule H: Tool usage and calls documented
 [ ] Rule I: Format follows agent-friendly structure
+[ ] Rule J: README.md included with installation, features, and usage
 [ ] Progressive disclosure applied (core in body, details in resources/)
 [ ] Self-contained validation criteria present
 [ ] No fluff, intros, or embedded large docs
