@@ -58,3 +58,9 @@ When editing or updating skills:
 - **Skill Rules** - `skill-rules.md` - Must-follow rules for all skills
 
 Learn more at https://skills.sh/docs
+
+### Skills Registry
+
+The repository maintains a `skills.json` file that catalogs all skills in `.agents/skills/` with their frontmatter data and goals. This file is automatically updated when skills are created, updated, or deleted.
+
+**Important:** When creating or modifying skills, always update `skills.json` to keep the registry in sync.

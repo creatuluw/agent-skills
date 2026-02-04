@@ -1,0 +1,51 @@
+{
+  "skills": [
+    {
+      "frontmatter": {
+        "name": "find-skills",
+        "description": "Helps users discover and install agent skills when they ask questions like 'how do I do X', 'find a skill for X', 'is there a skill that can...', or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill."
+      },
+      "goals": [
+        "Helps users discover and install skills from the open agent skills ecosystem",
+        "Enables searching for skills by domain (web development, testing, devOps, documentation, code quality, design, productivity)",
+        "Provides installation commands and links to skill documentation"
+      ]
+    },
+    {
+      "frontmatter": {
+        "name": "maestro-task-creator",
+        "description": "Create Auto Run task documents for Maestro with markdown checklists. Use when user wants to create tasks/playbooks for automated execution, needs help structuring work into task documents, or asks to 'create maestro tasks', 'make a playbook', 'break down into tasks', 'plan auto run workflow'."
+      },
+      "goals": [
+        "Create well-structured Auto Run task documents for Maestro",
+        "Enable spec-driven execution with clear, actionable task checklists that AI agents can execute independently",
+        "Provide session isolation with tasks designed for clean context in fresh AI sessions",
+        "Support iterative refinement with documents that can be reviewed, updated, and re-run",
+        "Enable progress tracking with checkboxes that mark completion state for each task"
+      ]
+    },
+    {
+      "frontmatter": {
+        "name": "skill-creator",
+        "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+        "license": "Complete terms in LICENSE.txt"
+      },
+      "goals": [
+        "Provide guidance for creating effective skills",
+        "Help users understand what skills provide (specialized workflows, tool integrations, domain expertise, bundled resources)",
+        "Teach core principles: concise is key, set appropriate degrees of freedom, anatomy of a skill, progressive disclosure",
+        "Guide users through the 6-step skill creation process"
+      ]
+    }
+  ],
+  "metadata": {
+    "generated": "2025-06-18",
+    "total_skills": 3,
+    "source_directory": ".agents/skills",
+    "categories": [
+      "Skill Discovery",
+      "Task Management",
+      "Skill Creation"
+    ]
+  }
+}

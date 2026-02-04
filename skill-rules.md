@@ -325,6 +325,66 @@ All skills **MUST** follow these agent-friendly formatting standards to minimize
 
 ---
 
+## Skills.json Maintenance
+
+**CRITICAL:** The `skills.json` file in the repository root MUST be kept synchronized with all skills in `.agents/skills/`.
+
+### When to Update skills.json
+
+You MUST update `skills.json` when:
+- **Creating a new skill** - Add the new skill's frontmatter and goals
+- **Updating an existing skill** - Update the affected skill's entry if frontmatter or goals change
+- **Deleting a skill** - Remove the skill's entry from the JSON file
+
+### What to Include
+
+For each skill, include:
+- `frontmatter`: All YAML frontmatter fields from SKILL.md (name, description, license, etc.)
+- `goals`: The goals section extracted from the skill's content
+
+### File Location
+
+```
+agent-skills/
+└── skills.json
+```
+
+### Example Format
+
+```json
+{
+  "skills": [
+    {
+      "frontmatter": {
+        "name": "skill-name",
+        "description": "Skill description from frontmatter"
+      },
+      "goals": [
+        "Goal 1 from skill content",
+        "Goal 2 from skill content"
+      ]
+    }
+  ],
+  "metadata": {
+    "generated": "YYYY-MM-DD",
+    "total_skills": N,
+    "source_directory": ".agents/skills"
+  }
+}
+```
+
+### Verification
+
+After any skill changes, verify:
+```
+[ ] All skills in .agents/skills/ are represented in skills.json
+[ ] Frontmatter matches SKILL.md exactly
+[ ] Goals are accurately extracted from skill content
+[ ] Total skills count is correct
+```
+
+---
+
 ## Rule J: README Documentation
 
 Every skill **MUST** include a `README.md` file that provides essential information for users.
@@ -460,3 +520,4 @@ Before committing a skill to this repository, verify:
 - Always version old skill files to `versioning/` before major updates
 - When creating a new skill, update `README.md` with the skill entry and installation command
 - If the skill introduces new patterns or best practices, document them in this file (skill-rules.md)
+- **ALWAYS update `skills.json`** when creating, updating, or deleting skills to keep the registry synchronized

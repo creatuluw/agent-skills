@@ -121,6 +121,12 @@ After creating a new skill, you MUST update the following files:
    - Update examples if the skill introduces new best practices
    - Ensure consistency with existing rules
 
+3. **Update `skills.json`:**
+   - Add the new skill's frontmatter data (name, description, license, etc.)
+   - Extract and add the goals section from the skill
+   - Update the `total_skills` count in the metadata
+   - Update the `generated` date
+
 **Example README.md entry:**
 ```markdown
 - **skill-name** - Description from SKILL.md frontmatter. Use this when you need to...
@@ -167,9 +173,17 @@ npx skills add creatuluw/agent-skills --skill skill-name
 - Ensure consistency with templates/
 
 **STEP 3: Re-validate**
+### STEP 3: Re-validate
 - Run compliance checklist again
 - Ensure all 6 rules still apply
 - Test that skill still functions as intended
+
+**STEP 4: Update Documentation**
+
+After updating an existing skill, you MUST update `skills.json`:
+- Update the affected skill's frontmatter if it changed
+- Update the goals if they changed
+- Ensure the metadata is accurate
 
 ---
 
@@ -201,6 +215,13 @@ User requests:
 - Compliance checklist
 - Ensure no functionality is lost
 - Test against acceptance criteria
+
+**STEP 5: Update Documentation**
+
+After refactoring a skill, you MUST update `skills.json`:
+- Update the affected skill's frontmatter if it changed
+- Update the goals if they changed
+- Ensure the metadata is accurate
 
 ---
 
@@ -331,6 +352,8 @@ You MUST take these actions automatically:
 [ ] Versioned properly (if update)
 [ ] Updated README.md with new skill entry (if creating new skill)
 [ ] Updated skill-rules.md if new patterns introduced (if creating new skill)
+[ ] Updated skills.json with new skill information (if creating new skill)
+[ ] Updated skills.json with skill changes (if updating existing skill)
 ```
 
 **ALL items must be checked before proceeding.**
