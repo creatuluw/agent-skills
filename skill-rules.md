@@ -2,6 +2,8 @@
 
 Every skill in this repository must adhere to the following rules to ensure consistency, clarity, and effectiveness for AI agents.
 
+---
+
 ## Rule A: Goals
 
 Every skill **MUST** start with clear, specific goals that define what the skill should achieve.
@@ -10,7 +12,7 @@ Every skill **MUST** start with clear, specific goals that define what the skill
 - Describe the primary purpose and expected outcomes
 - Should answer: "What will this skill enable an agent to do?"
 
-Example:
+### Examples
 ```
 ## Goals
 - Enable agents to automate browser interactions for testing and data extraction
@@ -28,7 +30,7 @@ Every skill **MUST** include at least 3 acceptance criteria that define success 
 - They define when the agent has successfully completed the skill's task
 - Should answer: "How does an agent know it succeeded?"
 
-Example:
+### Examples
 ```
 ## Acceptance Criteria
 
@@ -48,7 +50,7 @@ Every skill **MUST** include logic for decision management when agents face new 
 - Include reasoning for choosing between alternative approaches
 - Should answer: "What does the agent do when things don't go as planned?"
 
-Example:
+### Examples
 ```
 ## Decision Management
 
@@ -71,11 +73,14 @@ Every skill **MUST** include clear triggers that tell an agent when to use this 
 
 - Define specific user intents or situations that activate this skill
 - Include keyword patterns or phrase matches
+- **Trigger description must be a concise, natural-language hook (10-20 words)**
 - Should answer: "When should an agent use this skill?"
 
-Example:
+### Examples
 ```
 ## Triggers
+
+**Trigger Description**: "Extract CSV data from PDF files using pandas"
 
 Use this skill when the user:
 - Requests to "open a website", "visit a URL", or navigate to a web page
@@ -94,9 +99,10 @@ Use this skill when the user:
 - Break complex operations into clear, ordered steps
 - Each step should explain what to do and why it's necessary
 - Include checklists for verification points
+- Use numbered steps for sequences, bullets for lists, code blocks for commands
 - Should answer: "What does the agent do, in what order, and why?"
 
-Example:
+### Examples
 ```
 ## Core Workflow
 
@@ -141,7 +147,7 @@ Every skill **MUST** include logic for when human approval, advice, or feedback 
 - Indicate whether approval, advice, or feedback is needed
 - Should answer: "When does the agent need to involve a human?"
 
-Example:
+### Examples
 ```
 ## Human Interaction
 
@@ -197,18 +203,159 @@ Does this meet your expectations? [yes/no/adjust]
 
 ---
 
+## Rule G: Permissions
+
+Every skill **MUST** explicitly specify what permissions, access rights, and resources they require.
+
+- **System permissions**: file system access, network access, administrative privileges
+- **Resource access**: which files, directories, APIs, databases the skill can access
+- **Scope of modification**: what data/resources the skill can create, modify, or delete
+- **Privilege escalation**: whether the skill requires elevated permissions and why
+
+### Examples
+```
+## Permissions
+
+**Required:**
+- File system read/write access to project directory
+- Network access to external APIs
+- No administrative privileges needed
+
+**Scope:**
+- Can create/modify files in `src/` and `test/` directories
+- Cannot modify configuration files or dependencies
+- Cannot access files outside project root
+```
+
+---
+
+## Rule H: Tool Usage and Calls
+
+Every skill **MUST** specify all tools, commands, and external calls they make.
+
+- **Tool dependencies**: which command-line tools, packages, or agents are required
+- **Command patterns**: exact command formats, flags, and parameters
+- **Sequential vs parallel**: tool call order and dependencies
+- **Tool-specific error handling**: how to interpret tool output and errors
+
+### Examples
+```
+## Tool Usage
+
+**Required Tools:**
+- `find-skills` - for discovering existing skills
+- `terminal` - for executing shell commands
+- `read_file` / `edit_file` - for file operations
+
+**Command Patterns:**
+```bash
+npx skills find <keywords>
+terminal -c "npm install <package>"
+edit_file -path <file> -mode <mode>
+```
+
+**Tool Call Sequence:**
+1. Use `find-skills` to check for duplicates
+2. Use `read_file` to examine templates
+3. Use `terminal` to create skill structure
+4. Use `edit_file` to write skill content
+```
+
+---
+
+## Rule I: Markdown Format and Structure
+
+All skills **MUST** follow these agent-friendly formatting standards to minimize context bloat.
+
+### Header Structure
+```
+# <Skill Name>
+## Goals
+## Permissions
+## Tool Usage
+## Triggers
+## Acceptance Criteria
+## Core Instructions
+## Decision Management
+## Human Interaction
+## Limits
+```
+
+### Content Guidelines
+- ✅ Numbered steps for sequences (1, 2, 3...)
+- ✅ Bullets for lists (•)
+- ✅ Code blocks for commands, examples, templates
+- ✅ Decision trees using `if/then` format
+- ❌ NO intros, fluff, or changelogs
+- ❌ NO embedded large documentation files
+
+### Reference Strategy
+- Link to `resources/examples.md` for detailed examples
+- Link to `resources/templates.md` for templates
+- Never inline large docs (>50 lines)
+
+### Progressive Disclosure
+- **Body**: Core steps and essential information only
+- **resources/**: Detailed examples, edge cases, troubleshooting
+- Load references on-demand only when needed
+
+### Examples
+```
+## Core Instructions
+
+### Step 1: Research Existing Skills
+1. Run: `npx skills find <keywords>`
+2. Review results for similar skills
+3. Document any overlaps found
+
+### Step 2: Check Templates
+1. Read: `.opencode/skills/skill-creator/SKILL.md`
+2. Identify relevant patterns
+3. Note required structure
+
+*See `resources/templates.md` for complete template reference*
+```
+
+### Self-Contained Validation
+- Include testable success criteria in skill body
+- Provide example inputs/outputs
+- Define clear error conditions
+- Specify boundaries and anti-use cases
+
+---
+
+## Limits
+
+### What These Rules Don't Cover
+- Performance optimization techniques (skill-specific)
+- Domain-specific best practices (e.g., web scraping ethics)
+- Integration patterns with third-party services
+
+### When to Deviate
+- Never deviate from mandatory rules without explicit approval
+- Contact repository maintainers for special cases
+- Document any deviations clearly in the skill
+
+---
+
 ## Compliance Checklist
 
 Before committing a skill to this repository, verify:
 
 ```
 [ ] Rule A: Goals section present and clear
-[ ] Rule B: At least 3 acceptance criteria defined
+[ ] Rule B: 3+ acceptance criteria defined
 [ ] Rule C: Decision management logic included
-[ ] Rule D: Triggers clearly specified
+[ ] Rule D: Triggers present with natural-language precision (10-20 words)
 [ ] Rule E: Steps/tasks/checklists included (if applicable)
 [ ] Rule F: Human interaction scenarios defined
-[ ] Skill follows patterns from templates/ directory
+[ ] Rule G: Permissions explicitly specified
+[ ] Rule H: Tool usage and calls documented
+[ ] Rule I: Format follows agent-friendly structure
+[ ] Progressive disclosure applied (core in body, details in resources/)
+[ ] Self-contained validation criteria present
+[ ] No fluff, intros, or embedded large docs
+[ ] Follows patterns from templates/ directory
 [ ] Existing skills researched via find-skills
 ```
 
